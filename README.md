@@ -1,4 +1,4 @@
-<img src="[https://github.com/cwt0490/HassIO-FRP-Client/blob/main/logo.png](https://n.wtchu.top:5082/upload/2022/01/10/20220110015258-90b4d31f.jpg)" width=100 height=100 />
+<img src="[[icon](https://n.wtchu.top:5082/upload/2022/01/09/20220109031631-e7163269.png)" width=100 height=100 />
 
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armhf Architecture][armhf-shield] ![Supports armv7 Architecture][armv7-shield] ![Supports i386 Architecture][i386-shield]
 
