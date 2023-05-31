@@ -10,7 +10,8 @@ declare compression
 SERVER_IP=$(bashio::config 'serverip')
 SERVER_PORT=$(bashio::config 'serverport')
 AUTH_TOKEN=$(bashio::config 'token')
-HA_PORT=$(bashio::config 'haport')
+LOCAL_PORT=$(bashio::config 'localport')
+REMOTE_PORT=$(bashio::config 'remoteport')
 ENCRYPTION=$(bashio::config 'encryption')
 COMPRESSION=$(bashio::config 'compression')
 
@@ -19,7 +20,8 @@ echo  "Using Server: ${SERVER_IP}"
 echo  "Using Port:   ${SERVER_PORT}"
 echo  "Using Token:  ${AUTH_TOKEN}"
 echo  "******* HOME ASSISTANT CONFIG ******"
-echo  "Using HA Port: ${HA_PORT}"
+echo  "Using Local Port: ${LOCAL_PORT}"
+echo  "Using Remote Port: ${REMOTE_PORT}"
 echo  "Using Encryption: ${ENCRYPTION}"
 echo  "Using Compression: ${COMPRESSION}"
 echo "*************************************"
@@ -52,8 +54,8 @@ if [ ! -f /usr/src/frpc.ini ]; then
     fi
 
     echo "local_ip = 127.0.0.1 " >> /usr/src/frpc.ini
-    echo "local_port = ${HA_PORT}" >> /usr/src/frpc.ini
-    echo "remote_port = ${HA_PORT}" >> /usr/src/frpc.ini
+    echo "local_port = ${LOCAL_PORT}" >> /usr/src/frpc.ini
+    echo "remote_port = ${REMOTE_PORT}" >> /usr/src/frpc.ini
 
     echo "Creating frpc.ini done"
 fi
