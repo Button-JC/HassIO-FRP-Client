@@ -15,7 +15,8 @@ schema:
   serverip: str
   serverport: int
   token: str?
-  haport : int
+  localport : int
+  remoteport: int
   encryption: bool?
   compression: bool?
 arch:
