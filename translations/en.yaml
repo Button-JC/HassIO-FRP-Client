@@ -11,9 +11,13 @@ configuration:
     name: "Token"
     description: "The Token (Auth) of the FRP server to connect with"
     default: ""
-  haport:
-    name: "HomeAssistant Port"
-    description: "The Port of HomeAssistant to connect with"
+  localport:
+    name: "Local Port"
+    description: "The Port of HomeAssistant which is using"
+    default: 8123
+  remoteport:
+    name: "Remote Port"
+    description: "The Port of FRPS to publish which will be connected to"
     default: 8123
   encryption:
     name: "Enable encryption"
