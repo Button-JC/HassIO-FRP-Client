@@ -50,7 +50,7 @@ Check the log of the addon after starting to make sure everthing went well.
 
 
 ## Authors
-
+- [@wes](https://github.com/cwt0490)
 - [@JaccoVeldscholten](https://github.com/JaccoVeldscholten)
 
 Special thanks to: [@steplov](https://github.com/steplov) for the setup script
