@@ -9,6 +9,7 @@ FRP can be used to bypass port forwarding for home assistant. Install a remote s
 
 This tool is able to do the configuration of Home Assistant automatically. With options for authentication, encryption and compression.
 
+NOTE!!!This add-on uses frp version 0.21.0. If you want to use newer version, please fork and change "build.json" file by yourself!
 
 ## Installation
 
