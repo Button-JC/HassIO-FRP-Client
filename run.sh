@@ -31,29 +31,29 @@ echo "*************************************"
 if [ ! -f /usr/src/frpc.toml ]; then
     echo "Creating frpc.toml"
     echo "[common]" > /usr/src/frpc.toml
-    echo "server_addr = ${SERVER_IP}" >> /usr/src/frpc.toml
-    echo "server_port = ${SERVER_PORT}" >> /usr/src/frpc.toml
+    echo "server_addr = \"${SERVER_IP}\"" >> /usr/src/frpc.toml
+    echo "server_port = \"${SERVER_PORT}\"" >> /usr/src/frpc.toml
 
     # If token is filled then add token authentication
     if [ ! -z "${AUTH_TOKEN}" ]; then
-        echo "authentication_method = token" >> /usr/src/frpc.ini
-        echo "token = ${AUTH_TOKEN}" >> /usr/src/frpc.toml
+        echo "authentication_method = \"token\"" >> /usr/src/frpc.toml
+        echo "token = \"${AUTH_TOKEN}\"" >> /usr/src/frpc.toml
     fi
 
     echo "Adding HA Exposure......."
     echo "" >> /usr/src/frpc.toml
     echo "[hass]" >> /usr/src/frpc.toml
-    echo "type = tcp" >> /usr/src/frpc.toml
+    echo "type = \"tcp\"" >> /usr/src/frpc.toml
 
     # If encryption or/and compression is enabled. add them 
     if [ "${ENCRYPTION}" = "true" ]; then
-        echo "use_encryption = true" >> /usr/src/frpc.toml
+        echo "use_encryption = \"true\"" >> /usr/src/frpc.toml
     fi
     if [ "${COMPRESSION}" = "true" ]; then
-        echo "use_compression = true" >> /usr/src/frpc.toml
+        echo "use_compression = \"true\"" >> /usr/src/frpc.toml
     fi
 
-    echo "local_ip = 127.0.0.1 " >> /usr/src/frpc.toml
+    echo "local_ip = \"127.0.0.1\"" >> /usr/src/frpc.toml
     echo "local_port = ${LOCAL_PORT}" >> /usr/src/frpc.toml
     echo "remote_port = ${REMOTE_PORT}" >> /usr/src/frpc.toml
 

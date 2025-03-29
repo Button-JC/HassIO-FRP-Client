@@ -1,6 +1,6 @@
 name: "FRP Proxy Client for HassIO"
 description: "This tool can be used to setup a FRP proxy to bypass portfowarding"
-version: "1.0.1"
+version: "1.0.2"
 slug: "frp_client"
 init: false
 network: host
