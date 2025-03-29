@@ -1,4 +1,4 @@
-<img src="https://n.wtchu.top:5082/upload/2023/05/31/20230531063746-61d30c37.png" width=100 height=100 />
+<img src="logo.png" width=100 height=100 />
 
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armhf Architecture][armhf-shield] ![Supports armv7 Architecture][armv7-shield] ![Supports i386 Architecture][i386-shield]
 
@@ -27,21 +27,21 @@ bind_port = 7000
 
 #Optional for dashboard
 dashboard_port = 7500
-dashboard_user = user
-dashboard_pwd = userpass
+dashboard_user = "<user>"
+dashboard_pwd = "<userpass>
 
 #Optional for auth (Should match with Client settings)
-authentication_method = token
-token = sometoken
+authentication_method = "token"
+token = "<sometoken>"
 
 #Optinal for metrics
-enable_prometheus = true
+enable_prometheus = "true"
 
 ```
 
 Run the program with: frps -c frps.toml
 
-### Client config (FRPC.ini)
+### Client config (FRPC.toml)
 After setting up the server go to the configuration tab of the addon and set the correct settings according to the server configuration.
 Check the log of the addon after starting to make sure everthing went well.
 ## License
